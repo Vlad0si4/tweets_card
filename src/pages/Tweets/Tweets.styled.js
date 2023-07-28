@@ -4,6 +4,9 @@ export const Wrapper = styled.div`
   margin-top: 40px;
   margin-left: 40px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 `;
 
 export const StyledCard = styled.div`
@@ -85,4 +88,8 @@ export const StyledBtn = styled.button`
   &:hover {
     background: #5cd3a8;
   }
+`;
+
+export const StyledAvatar = styled.img`
+  border-radius: 50%;
 `;
