@@ -1,7 +1,5 @@
 import currencyImg from "../../assets/images/bcg_fon_card_1x.png";
 import currencyImgRetina from "../../assets/images/bcg_fon_card_2x.png";
-// import lineCard from "../../assets/images/rectangle_1x.png";
-// import lineCardRetina from "../../assets/images/rectangle_2x.png";
 
 import currencyImgWebp from "../../assets/images/bcg_fon_card_1x.webp";
 import currencyImgWebpRetina from "../../assets/images/bcg_fon_card_2x.webp";
@@ -15,8 +13,17 @@ import {
   StyledSpanWrapper,
   Wrapper,
 } from "./Tweets.styled";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchUserThunk } from "../../redux/UserCard/operations";
 
 export const Tweets = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUserThunk());
+  }, [dispatch]);
+
   return (
     <Wrapper>
       <StyledCard>

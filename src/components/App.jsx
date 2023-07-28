@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./NavBar/Layout";
-import { Home } from "../pages/Home";
+import { Home } from "../pages/Home/Home";
 import { Tweets } from "../pages/Tweets/Tweets";
-import { GlobalStyle } from "../services/GlobalStyle";
+import { GlobalStyle } from "../services/Style/GlobalStyle";
 
-function App() {
+export const App = () => {
   return (
     <>
       <Routes>
@@ -17,6 +17,4 @@ function App() {
       <GlobalStyle />
     </>
   );
-}
-
-export default App;
+};
