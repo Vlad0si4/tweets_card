@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { fetchUserThunk } from "./operations";
+import { fetchUpdateThunkFollowed, fetchUserThunk } from "./operations";
 
 const initialState = {
   users: [],
@@ -26,8 +26,18 @@ const userSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-      .addMatcher(isAnyOf(fetchUserThunk.pending), pending)
-      .addMatcher(isAnyOf(fetchUserThunk.rejected), rejected);
+      .addCase(fetchUpdateThunkFollowed.fulfilled, (state) => {
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addMatcher(
+        isAnyOf(fetchUserThunk.pending, fetchUpdateThunkFollowed.pending),
+        pending
+      )
+      .addMatcher(
+        isAnyOf(fetchUserThunk.rejected, fetchUpdateThunkFollowed.rejected),
+        rejected
+      );
   },
 });
 

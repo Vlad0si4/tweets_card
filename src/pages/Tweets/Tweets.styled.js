@@ -6,7 +6,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  margin-bottom: 60px;
+  flex-direction: column;
 `;
 
 export const StyledCard = styled.div`
@@ -73,7 +75,10 @@ export const StyledBtn = styled.button`
   gap: 6px;
   cursor: pointer;
 
+  background: ${(props) => (props.followingUsers ? "#ebd8ff" : "#5cd3a8")};
   border-radius: 10px;
+  /* background: ${(props) =>
+    props.followingUsers ? "#ebd8ff" : "#5cd3a8"}; */
   background: #ebd8ff;
   margin-bottom: 36px;
   /* box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px
@@ -92,4 +97,45 @@ export const StyledBtn = styled.button`
 
 export const StyledAvatar = styled.img`
   border-radius: 50%;
+`;
+
+export const StyledListCard = styled.ul`
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+`;
+
+export const StyledItemCard = styled.li`
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+`;
+
+export const StyledBtnLoad = styled.button`
+  display: flex;
+  width: 196px;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-top: 30px;
+
+  border-radius: 10px;
+  background: #ebd8ff;
+  margin-bottom: 36px;
+
+  color: #373737;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  &:hover {
+    background: #5cd3a8;
+  }
 `;
