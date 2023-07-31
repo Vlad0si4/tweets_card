@@ -15,10 +15,10 @@ export const fetchUserThunk = createAsyncThunk(
 
 export const fetchUpdateThunkFollowed = createAsyncThunk(
   "user/updateFollower",
-  async ({ id, updateState, followingUsers }, { rejectWithValue }) => {
+  async ({ id, updateState, isFollowed }, { rejectWithValue }) => {
     console.log(updateState);
     try {
-      const data = await updateUsersFollower(id, updateState, followingUsers);
+      const data = await updateUsersFollower({ id, updateState, isFollowed });
       return data;
     } catch (error) {
       return rejectWithValue(error.message);

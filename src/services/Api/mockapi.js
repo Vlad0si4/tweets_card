@@ -10,9 +10,10 @@ export const fetchUsers = async () => {
   return data;
 };
 
-export const updateUsersFollower = async (id, updateState) => {
+export const updateUsersFollower = async ({ id, updateState, isFollowed }) => {
   const { data } = await instance.put(`/tweets_card/${id}`, {
     followers: updateState,
+    isFollowed,
   });
 
   return data;

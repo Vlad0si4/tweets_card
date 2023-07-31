@@ -75,11 +75,9 @@ export const StyledBtn = styled.button`
   gap: 6px;
   cursor: pointer;
 
-  background: ${(props) => (props.followingUsers ? "#ebd8ff" : "#5cd3a8")};
+  background-color: ${(props) =>
+    props.followed === "true" ? "#5cd3a8" : "#ebd8ff"};
   border-radius: 10px;
-  /* background: ${(props) =>
-    props.followingUsers ? "#ebd8ff" : "#5cd3a8"}; */
-  background: #ebd8ff;
   margin-bottom: 36px;
   /* box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px
     rgba(0, 0, 0, 0.25); */
