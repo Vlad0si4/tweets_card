@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -117,31 +116,6 @@ export const StyledItemCard = styled.li`
 export const StyledBtnLoad = styled.button`
   display: flex;
   width: 196px;
-  padding: 14px 28px;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  margin-top: 30px;
-
-  border-radius: 10px;
-  background: #ebd8ff;
-  margin-bottom: 36px;
-
-  color: #373737;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-
-  text-transform: uppercase;
-  &:hover {
-    background: #5cd3a8;
-  }
-`;
-
-export const StyledBtnGoBack = styled(NavLink)`
-  display: flex;
-  width: 100px;
   padding: 14px 28px;
   justify-content: center;
   align-items: center;

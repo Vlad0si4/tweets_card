@@ -1,11 +1,8 @@
 import currencyImg from "../../assets/images/bcg_fon_card_1x.png";
 import currencyImgRetina from "../../assets/images/bcg_fon_card_2x.png";
-
 import currencyImgWebp from "../../assets/images/bcg_fon_card_1x.webp";
 import currencyImgWebpRetina from "../../assets/images/bcg_fon_card_2x.webp";
-
 import { useDispatch, useSelector } from "react-redux";
-import { selectUsers } from "../../redux/UserCard/selector";
 import {
   StyledAvatar,
   StyledBtn,
@@ -31,7 +28,6 @@ export const UsersCard = () => {
   const dispatch = useDispatch();
   const usersData = useSelector(selectFilteredData);
   const [showUserCard, setShowUserCard] = useState(3);
-  console.log(usersData);
 
   const handleLoadMore = () => {
     setShowUserCard((prev) => prev + 3);
