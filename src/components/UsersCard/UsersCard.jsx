@@ -25,11 +25,13 @@ import {
   fetchUpdateThunkFollowed,
   fetchUserThunk,
 } from "../../redux/UserCard/operations";
+import { selectFilteredData } from "../../redux/Filter/selector";
 
 export const UsersCard = () => {
   const dispatch = useDispatch();
-  const usersData = useSelector(selectUsers);
+  const usersData = useSelector(selectFilteredData);
   const [showUserCard, setShowUserCard] = useState(3);
+  console.log(usersData);
 
   const handleLoadMore = () => {
     setShowUserCard((prev) => prev + 3);
@@ -82,8 +84,8 @@ export const UsersCard = () => {
                   </StyledSpanWrapper>
 
                   <StyledDiscWrapper key={id}>
-                    <p>{tweets} TWEETS</p>
-                    <p>{followers} FOLLOWERS</p>
+                    <p>{tweets.toLocaleString("en-US")} TWEETS</p>
+                    <p>{followers.toLocaleString("en-US")} FOLLOWERS</p>
                   </StyledDiscWrapper>
                   <StyledBtn
                     followed={isFollowed ? "true" : "false"}

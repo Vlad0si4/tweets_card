@@ -6,7 +6,6 @@ export const instance = axios.create({
 
 export const fetchUsers = async () => {
   const { data } = await instance.get("/tweets_card");
-  console.log(data);
   return data;
 };
 
