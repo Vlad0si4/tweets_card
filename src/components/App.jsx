@@ -1,8 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./SharedLayout/SharedLayout";
 import { Home } from "../pages/Home/Home";
-import { Tweets } from "../pages/Tweets/Tweets";
 import { GlobalStyle } from "../services/Style/GlobalStyle";
+import { lazy } from "react";
+const Tweets = lazy(() => import("../pages/Tweets/Tweets"));
 
 export const App = () => {
   return (
