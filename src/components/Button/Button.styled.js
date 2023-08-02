@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const StyledBtnGoBack = styled(NavLink)`
   display: flex;
-  width: 50px;
   padding: 5px 10px;
   justify-content: center;
   align-items: center;
@@ -15,11 +14,8 @@ export const StyledBtnGoBack = styled(NavLink)`
   background: #ebd8ff;
 
   color: #373737;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 600;
+  font-size: 14px;
 
-  text-transform: uppercase;
   &:hover {
     background: #5cd3a8;
   }

@@ -79,17 +79,17 @@ export const StyledBtn = styled.button`
     props.followed === "true" ? "#5cd3a8" : "#ebd8ff"};
   border-radius: 10px;
   margin-bottom: 36px;
-  /* box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px
-    rgba(0, 0, 0, 0.25); */
 
   color: #373737;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
 
   text-transform: uppercase;
+  transition: transform 0.3s ease;
   &:hover {
     background: #5cd3a8;
+
+    transform: scale(1.04);
   }
 `;
 
@@ -106,11 +106,9 @@ export const StyledListCard = styled.ul`
 `;
 
 export const StyledItemCard = styled.li`
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.06);
-  }
+  /* &:hover {
+    transform: scale(1.04);
+  } */
 `;
 
 export const StyledBtnLoad = styled.button`
@@ -133,7 +131,10 @@ export const StyledBtnLoad = styled.button`
   font-weight: 600;
 
   text-transform: uppercase;
+
+  transition: transform 0.3s ease;
   &:hover {
     background: #5cd3a8;
+    transform: scale(1.04);
   }
 `;

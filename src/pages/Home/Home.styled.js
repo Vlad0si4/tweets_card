@@ -13,11 +13,11 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h1`
   color: white;
+  transition: transform 0.3s ease;
   &:hover {
     color: #5cd3a8;
+    transform: scale(1.04);
   }
 `;
 
-export const LinkStyled = styled(NavLink)`
-  text-decoration: none;
-`;
+export const LinkStyled = styled(NavLink)``;

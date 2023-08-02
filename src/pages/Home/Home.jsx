@@ -6,8 +6,8 @@ export const Home = () => {
     <Wrapper>
       <NavLink to={"/tweets"}>
         <Title>
-          Hello, you have entered the tweet site, please go to the tweets tab to
-          see who you would like to follow
+          Hello, you have entered the tweets site, please go to the tweets tab
+          or click this message to see who you would like to follow
         </Title>
       </NavLink>
     </Wrapper>

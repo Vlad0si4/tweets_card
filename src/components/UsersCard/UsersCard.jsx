@@ -23,6 +23,7 @@ import {
   fetchUserThunk,
 } from "../../redux/UserCard/operations";
 import { selectFilteredData } from "../../redux/Filter/selector";
+import { StyledText } from "./UserCard.styled";
 
 export const UsersCard = () => {
   const dispatch = useDispatch();
@@ -80,8 +81,12 @@ export const UsersCard = () => {
                   </StyledSpanWrapper>
 
                   <StyledDiscWrapper key={id}>
-                    <p>{tweets.toLocaleString("en-US")} TWEETS</p>
-                    <p>{followers.toLocaleString("en-US")} FOLLOWERS</p>
+                    <StyledText>
+                      {tweets.toLocaleString("en-US")} TWEETS
+                    </StyledText>
+                    <StyledText>
+                      {followers.toLocaleString("en-US")} FOLLOWERS
+                    </StyledText>
                   </StyledDiscWrapper>
                   <StyledBtn
                     followed={isFollowed ? "true" : "false"}
