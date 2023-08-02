@@ -103,13 +103,11 @@ export const StyledListCard = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  align-items: center;
 `;
 
-export const StyledItemCard = styled.li`
-  /* &:hover {
-    transform: scale(1.04);
-  } */
-`;
+export const StyledItemCard = styled.li``;
 
 export const StyledBtnLoad = styled.button`
   display: flex;
